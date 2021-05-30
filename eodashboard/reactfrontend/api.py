@@ -1,9 +1,11 @@
 import requests
 
-class Covid_19():
+
+class Covid_19:
     """
     Covid 19 api method
     """
+
     def get_countries(self):
         """
         Gets all the country with code
@@ -17,9 +19,7 @@ class Covid_19():
                 "countries": countries,
             }
         else:
-            context = {
-                "messege": "Bad requests."
-            }
+            context = {"messege": "Bad requests."}
         return context
 
     def get_summary(self):
@@ -39,9 +39,7 @@ class Covid_19():
                 "country_data": country_data,
             }
         else:
-            context = {
-                "messege": "Bad requests."
-            }
+            context = {"messege": "Bad requests."}
         return context
 
     def get_data_from_day_one_by_country(self, country):
@@ -50,7 +48,8 @@ class Covid_19():
         country should be from country/ or summary/ endpoint.
         Access data by context['data_from_day_one_by_country'][i]["Recovered"] # i is the index
         """
-        url = "https://api.covid19api.com/total/dayone/country/{country}".format(country=country)
+        url = "https://api.covid19api.com/total/dayone/country/{country}"
+        url = url.format(country=country)
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
@@ -58,9 +57,7 @@ class Covid_19():
                 "data_from_day_one_by_country": data,
             }
         else:
-            context = {
-                "messege": "Bad requests."
-            }
+            context = {"messege": "Bad requests."}
         return context
 
     def get_data_of_country_by_range_status(self, country, status, date_from, date_to):
@@ -68,9 +65,18 @@ class Covid_19():
         Returns all cases by case type for a country within a range of time.
         country should be from country/ or summary/ endpoint.
         status should be from confirmed/recovered/deaths
-        Access data by context['data_of_country_by_range_status'][i]["Cases"] # i is the index
+        Access data by context['data_of_country_by_range_status'][i]["Cases"]
+        # i is the index
         """
-        url = "https://api.covid19api.com/total/country/{country}/status/{status}?from={date_from}T00:00:00Z&to={date_to}T00:00:00Z".format(country=country, status=status, date_from=date_from, date_to=date_to)
+        url = (
+            "https://api.covid19api.com/total/country/{country}/status/",
+            "{status}?from={date_from}T00:00:00Z&to={date_to}T00:00:00Z",
+        )
+
+        url = url.format(
+            country=country, status=status, date_from=date_from,
+            date_to=date_to
+        )
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
@@ -78,7 +84,5 @@ class Covid_19():
                 "data_of_country_by_range_status": data,
             }
         else:
-            context = {
-                "messege": "Bad requests."
-            }
+            context = {"messege": "Bad requests."}
         return context
