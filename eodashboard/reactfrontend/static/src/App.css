@@ -14,3 +14,7 @@
     font-family: sans-serif;
     color:#169A9A;
 }
+.App_page
+{
+  display:flex;
+}

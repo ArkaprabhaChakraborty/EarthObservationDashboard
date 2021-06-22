@@ -1,0 +1,16 @@
+.CovidDashboard
+{
+    flex: 1;
+    background-color: rgb(48, 48, 48);
+    padding: 40px 20px;
+    padding-bottom: 0;
+}
+.Map
+{
+    height:20vh;
+    width: 40vw;
+}
+.MapBox
+{
+    display: flex;
+}
