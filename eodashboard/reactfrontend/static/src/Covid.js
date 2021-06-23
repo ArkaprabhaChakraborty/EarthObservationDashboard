@@ -1,17 +1,15 @@
-import React, {Component}from 'react';
+import React from 'react';
 import './Covid.css';
+import { WebMaps } from './webmap';
 
-class Covid extends Component {
+const Covid = () => {
 
-    render()
-    {
-      return(
-              <div className="CovidDashboard">
+    return(
+            <div className="CovidDashboard">
                 <div className="MapBox">
-                  <div id="viewDiv"/>
+                  <WebMaps/>
                 </div>
-              </div>
+            </div>
             );
     }
-  }
 export default Covid;

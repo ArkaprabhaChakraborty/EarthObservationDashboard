@@ -2,19 +2,17 @@ const path = require("path");
             var webpack = require('webpack');
             var BundleTracker = require('webpack-bundle-tracker');
             const ArcGISPlugin = require("@arcgis/webpack-plugin");
-
             module.exports = {
                 entry:{ app:'./src/index.js'},
                 devtool:'source-map',
                 output: {
                 path: path.resolve(__dirname,'dist'),
                 filename: "[name].bundle.js",
+                
             },
-
             plugins: [
                 new BundleTracker({filename: './webpack-stats.json'}),
-            ],
-            plugins: [new ArcGISPlugin()],
+                new ArcGISPlugin({useDefaultAssetLoaders: false}),],
             module: {
             rules: [
             {
@@ -54,6 +52,7 @@ const path = require("path");
                     }
                 ]
             },
+            /*{ test: /\.json$/, loader: 'json-loader' },*/
             {
                 test: /\.(otf|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 use: [{

@@ -86,3 +86,14 @@ class Covid_19:
         else:
             context = {"messege": "Bad requests."}
         return context
+    def get_live_data(self,country,date):
+        url = (
+            "https://api.covid19api.com/live/country/{country}/status/{confirmed}/date/{date}"
+        )
+        url = url.format(country = country,confirmed = "confirmed",date = date)
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+        else:
+            data= {"message":"Bad Requests"}
+        return data

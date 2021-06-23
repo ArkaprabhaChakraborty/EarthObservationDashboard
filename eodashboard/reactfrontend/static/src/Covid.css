@@ -1,16 +1,27 @@
+@import "https://js.arcgis.com/4.20/esri/themes/dark/main.css";
+
+
 .CovidDashboard
 {
     flex: 1;
     background-color: rgb(48, 48, 48);
     padding: 40px 20px;
     padding-bottom: 0;
+    flex-wrap: wrap;
+    height : 90vh;
 }
-.Map
-{
-    height:20vh;
-    width: 40vw;
-}
+
 .MapBox
 {
     display: flex;
+    height:40vh !important;
+    width: 60vw !important;
+    padding:10px;
+}
+.viewDiv
+{
+    display: flex;
+    height:50vh !important;
+    width: 60vw !important;
+    padding:10px;
 }
