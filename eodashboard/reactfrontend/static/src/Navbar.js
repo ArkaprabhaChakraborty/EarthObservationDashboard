@@ -5,7 +5,8 @@ const Navbar = () => {
     return(
             <div className="Navbar">
                 <div className="navbarleft">
-                    <img className="header_logo" src="https://images.eodashboardhackathon.org/images/qd8yVOciXgoktJyIrYBDKpmCtCw=/9/original/" alt=""/>
+                    <img className="header_logo" src="https://images-na.ssl-images-amazon.com/images/I/51f%2Bcp4vEDL._SL1200_.jpg" alt=""/>
+                    <span className="header_name">BROTHER EYE</span>
                 </div>
                 <div className="navbarright">
                     <div className="headerbutton">

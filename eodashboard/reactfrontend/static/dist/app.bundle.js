@@ -58,7 +58,9 @@ var Covid = function Covid() {
     className: "CovidDashboard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "labeltext"
-  }, "COVID-19 Live Data"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_webmap__WEBPACK_IMPORTED_MODULE_2__.WebMaps, null));
+  }, "COVID-19 Live Data"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_webmap__WEBPACK_IMPORTED_MODULE_2__.WebMaps, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "bodytext"
+  }, "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.The above mapshows the daily confirmed, active, recovered and deaths cases for every province of every country."));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Covid);
@@ -88,9 +90,11 @@ var Navbar = function Navbar() {
     className: "navbarleft"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "header_logo",
-    src: "https://images.eodashboardhackathon.org/images/qd8yVOciXgoktJyIrYBDKpmCtCw=/9/original/",
+    src: "https://images-na.ssl-images-amazon.com/images/I/51f%2Bcp4vEDL._SL1200_.jpg",
     alt: ""
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "header_name"
+  }, "BROTHER EYE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "navbarright"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "headerbutton"
@@ -133,6 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var Airquality = function Airquality() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var raster = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
@@ -158,6 +163,48 @@ var Airquality = function Airquality() {
       layers: [raster, wms],
       target: 'map'
     });
+    var raster1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': 'epi:epi-environmental-performance-index-2020_hlt-air-quality',
+          'TILED': true
+        }
+      })
+    });
+    var wmsSource = new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+      url: 'ttps://sedac.ciesin.columbia.edu/geoserver/wms',
+      params: {
+        'LAYERS': 'epi:epi-environmental-performance-index-2020_hlt-air-quality'
+      }
+    });
+
+    var updateLegend = function updateLegend(resolution) {
+      var graphicUrl = wmsSource.getLegendUrl(resolution);
+      var img = document.getElementById('legendmap');
+      img.src = graphicUrl;
+    };
+
+    var map1 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      //interactions: defaults().extend([select, modify]),
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [0, 0],
+        zoom: 1
+      }),
+      layers: [raster1, wms1],
+      target: 'map1'
+    });
+    var resolution = map1.getView().getResolution();
+    updateLegend(resolution);
+    map1.getView().on('change:resolution', function (event) {
+      var resolution = event.target.getResolution();
+      updateLegend(resolution);
+    });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "aqmapping"
@@ -165,6 +212,20 @@ var Airquality = function Airquality() {
     className: "labeltext"
   }, "Population Density"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "map"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-27%2018-27-15.png",
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "The above map shows us that areas with more Population Density has more number of cases. This can be because of the fact that social distancing is really tough to be maintained in such densly populated areas."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, " Air Quality"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "This map shows the average air quality index from "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "legendmap"
   }));
 };
 
@@ -248,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://js.arcgis.com/4.20/esri/themes/dark/main.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".CovidDashboard {\n  flex: 0.6;\n  background-color: #303030;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n}\n\n.MapBox {\n  display: flex;\n  height: 40vh !important;\n  width: 60vw !important;\n  padding: 10px;\n}\n\n.viewDiv {\n  display: flex;\n  height: 50vh !important;\n  width: 60vw !important;\n  padding: 10px;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}", "",{"version":3,"sources":["webpack://./src/Covid.css"],"names":[],"mappings":"AAGA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;AAFJ;;AAKA;EAEI,aAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ","sourcesContent":["@import \"https://js.arcgis.com/4.20/esri/themes/dark/main.css\";\n\n\n.CovidDashboard\n{\n    flex:0.6;\n    background-color: rgb(48, 48, 48);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n}\n\n.MapBox\n{\n    display: flex;\n    height:40vh !important;\n    width: 60vw !important;\n    padding:10px;\n}\n.viewDiv\n{\n    display: flex;\n    height:50vh !important;\n    width: 60vw !important;\n    padding:10px;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".CovidDashboard {\n  flex: 0.6;\n  background-color: #303030;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n}\n\n.MapBox {\n  display: flex;\n  height: 10vh !important;\n  width: 60vw !important;\n  padding: 10px;\n}\n\n.viewDiv {\n  display: flex;\n  height: 40vh !important;\n  width: 60vw !important;\n  padding: 10px;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.bodytext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n  object-fit: contain;\n}", "",{"version":3,"sources":["webpack://./src/Covid.css"],"names":[],"mappings":"AAGA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;AAFJ;;AAKA;EAEI,aAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://js.arcgis.com/4.20/esri/themes/dark/main.css\";\n\n\n.CovidDashboard\n{\n    flex:0.6;\n    background-color: rgb(48, 48, 48);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n}\n\n.MapBox\n{\n    display: flex;\n    height:10vh !important;\n    width: 60vw !important;\n    padding:10px;\n}\n.viewDiv\n{\n    display: flex;\n    height:40vh !important;\n    width: 60vw !important;\n    padding:10px;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.bodytext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n    object-fit: contain;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -275,7 +336,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".Navbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 8px;\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: #141414;\n  color: white;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n}\n\n.navbarright {\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  padding-top: 0px;\n  padding-bottom: 0px;\n  justify-content: space-between;\n  background-color: #141414;\n}\n\n.navbarleft {\n  display: flex;\n  align-items: center;\n}\n\n.header_logo {\n  height: 25px;\n  width: 150px;\n  object-fit: contain;\n  margin-left: 0px;\n}\n\n.headerbutton {\n  display: flex;\n  height: 45px;\n  align-items: center;\n  padding-right: 45px;\n  padding-left: 45px;\n  object-fit: contain;\n  background-color: #141414;\n}\n\n.headerbutton:hover {\n  background-color: #3c3c3c;\n  cursor: pointer;\n  transition: transform 0.2s ease-in-out;\n  transform: scale(1.05) !important;\n  border: 1px #323232;\n  border-radius: 5px;\n}", "",{"version":3,"sources":["webpack://./src/Navbar.css"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,YAAA;EACA,gBAAA;EACA,MAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;EACA,wIAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,mBAAA;EACA,8BAAA;EACA,yBAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;AAAJ;;AAEA;EAEI,YAAA;EACA,YAAA;EACA,mBAAA;EACA,gBAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,YAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;AAAJ;;AAEA;EAEI,yBAAA;EACA,eAAA;EACA,sCAAA;EACA,iCAAA;EACA,mBAAA;EACA,kBAAA;AAAJ","sourcesContent":[".Navbar\n{\n    display:flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 8px;\n    position: sticky;\n    top: 0;\n    z-index: 100;\n    background-color: rgb(20, 20, 20);\n    color: rgb(255, 255, 255);\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n}\n.navbarright\n{\n    display: flex;\n    align-items: center;\n    padding:10px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n    justify-content: space-between;\n    background-color: rgb(20, 20, 20);\n}\n.navbarleft\n{\n    display:flex;\n    align-items:center;\n}\n.header_logo\n{\n    height:25px;\n    width: 150px;\n    object-fit: contain;\n    margin-left: 0px;\n}\n.headerbutton\n{\n    display: flex;\n    height:45px;\n    align-items: center;\n    padding-right: 45px;\n    padding-left: 45px;\n    object-fit: contain;\n    background-color: rgb(20, 20, 20);\n}\n.headerbutton:hover\n{\n    background-color: rgb(60,60,60);\n    cursor: pointer;\n    transition: transform 0.2s ease-in-out;\n    transform: scale(1.05) !important;\n    border: 1px rgb(50,50,50);\n    border-radius: 5px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".Navbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 8px;\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: #141414;\n  color: white;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n}\n\n.navbarright {\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  padding-top: 0px;\n  padding-bottom: 0px;\n  justify-content: space-between;\n  background-color: #141414;\n}\n\n.navbarleft {\n  display: flex;\n  align-items: center;\n  height: 25px;\n  padding: 10px;\n  border: 1px #141414;\n  border-radius: 5px;\n}\n\n.navbarleft:hover {\n  background-color: #282828;\n}\n\n.header_logo {\n  height: 25px;\n  width: 40px;\n  object-fit: contain;\n  margin-left: 0px;\n}\n\n.headerbutton {\n  display: flex;\n  height: 45px;\n  align-items: center;\n  padding-right: 45px;\n  padding-left: 45px;\n  object-fit: contain;\n  background-color: #141414;\n}\n\n.headerbutton:hover {\n  background-color: #3c3c3c;\n  cursor: pointer;\n  transition: transform 0.2s ease-in-out;\n  transform: scale(1.05) !important;\n  border: 1px #323232;\n  border-radius: 5px;\n}\n\n.header_name {\n  font-family: \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-weight: 1000;\n}", "",{"version":3,"sources":["webpack://./src/Navbar.css"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,YAAA;EACA,gBAAA;EACA,MAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;EACA,wIAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,mBAAA;EACA,8BAAA;EACA,yBAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;;AAGA;EAEI,yBAAA;AADJ;;AAIA;EAEI,YAAA;EACA,WAAA;EACA,mBAAA;EACA,gBAAA;AAFJ;;AAIA;EAEI,aAAA;EACA,YAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;AAFJ;;AAIA;EAEI,yBAAA;EACA,eAAA;EACA,sCAAA;EACA,iCAAA;EACA,mBAAA;EACA,kBAAA;AAFJ;;AAIA;EAEI,wEAAA;EACA,iBAAA;AAFJ","sourcesContent":[".Navbar\n{\n    display:flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 8px;\n    position: sticky;\n    top: 0;\n    z-index: 100;\n    background-color: rgb(20, 20, 20);\n    color: rgb(255, 255, 255);\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n}\n.navbarright\n{\n    display: flex;\n    align-items: center;\n    padding:10px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n    justify-content: space-between;\n    background-color: rgb(20, 20, 20);\n}\n.navbarleft\n{\n    display:flex;\n    align-items:center;\n    height: 25px;\n    padding:10px;\n    border: 1px rgb(20, 20, 20);\n    border-radius: 5px;\n}\n\n.navbarleft:hover\n{\n    background-color: rgb(40, 40, 40);\n}\n\n.header_logo\n{\n    height:25px;\n    width: 40px;\n    object-fit: contain;\n    margin-left: 0px;\n}\n.headerbutton\n{\n    display: flex;\n    height:45px;\n    align-items: center;\n    padding-right: 45px;\n    padding-left: 45px;\n    object-fit: contain;\n    background-color: rgb(20, 20, 20);\n}\n.headerbutton:hover\n{\n    background-color: rgb(60,60,60);\n    cursor: pointer;\n    transition: transform 0.2s ease-in-out;\n    transform: scale(1.05) !important;\n    border: 1px rgb(50,50,50);\n    border-radius: 5px;\n}\n.header_name\n{\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n    font-weight: 1000;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -303,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".aqmapping {\n  flex: 0.4;\n  background-color: #282828;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n}\n\n.map-container {\n  height: 50vh !important;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n#map {\n  height: 50vh;\n}", "",{"version":3,"sources":["webpack://./src/airqualitymapping.css"],"names":[],"mappings":"AAEA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;AADJ;;AAIA;EACI,uBAAA;AADJ;;AAGA;EAEQ,gBAAA;EACA,wIAAA;EACA,eAAA;AADR;;AAGA;EAEI,YAAA;AADJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n.aqmapping\n{\n    flex:0.4;\n    background-color: rgb(40, 40, 40);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n}\n\n.map-container {\n    height:50vh !important;\n    }\n.labeltext\n    {\n        color: aliceblue;\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n        font-weight: 10;\n    }\n#map\n{\n    height:50vh;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".aqmapping {\n  flex: 0.4;\n  background-color: #282828;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n  overflow-y: scroll;\n}\n\n.aqmapping::-webkit-scrollbar {\n  display: None;\n}\n\n.map-container {\n  height: 50vh !important;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n#map {\n  height: 30vh;\n  width: 34vw;\n}\n\n.legend {\n  height: 5vh;\n  width: 34vw;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n#map1 {\n  height: 30vh;\n  width: 34vw;\n}", "",{"version":3,"sources":["webpack://./src/airqualitymapping.css"],"names":[],"mappings":"AAEA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,kBAAA;AADJ;;AAGA;EAEI,aAAA;AADJ;;AAIA;EACI,uBAAA;AADJ;;AAGA;EAEQ,gBAAA;EACA,wIAAA;EACA,gBAAA;AADR;;AAGA;EAEI,YAAA;EACA,WAAA;AADJ;;AAGA;EAEI,WAAA;EACA,WAAA;AADJ;;AAGA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AADJ;;AAIA;EAEI,YAAA;EACA,WAAA;AAFJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n.aqmapping\n{\n    flex:0.4;\n    background-color: rgb(40, 40, 40);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n    overflow-y: scroll;\n}\n.aqmapping::-webkit-scrollbar\n{\n    display:None;\n}\n\n.map-container {\n    height:50vh !important;\n    }\n.labeltext\n    {\n        color: aliceblue;\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n        font-weight: 400;\n    }\n#map\n{\n    height:30vh;\n    width:34vw;\n}\n.legend\n{\n    height:5vh;\n    width:34vw;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n\n#map1\n{\n    height:30vh;\n    width:34vw;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
