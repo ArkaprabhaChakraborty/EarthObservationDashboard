@@ -6,10 +6,9 @@ const Covid = () => {
 
     return(
             <div className="CovidDashboard">
-                <div className="MapBox">
-                  <WebMaps/>
-                </div>
+              <span className="labeltext">COVID-19 Live Data</span>
+              <WebMaps/>
             </div>
-            );
+          );
     }
 export default Covid;
