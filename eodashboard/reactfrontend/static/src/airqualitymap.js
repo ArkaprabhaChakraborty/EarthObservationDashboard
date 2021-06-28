@@ -127,6 +127,7 @@ const Airquality = () => {
             <br></br>
             <div className="Mapflex_with_tlegend">
               <div id="map2"></div>
+              <img className="legend" src="https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/cod.png" alt=""></img>
             </div>
             <br></br>
             <span className="maptext">This map shows the CO levels which might indicate the proportioanlity of increase of diseases, especially COVID-19. Carbon Monoxide can cause serious health damages, sometimes leading to situations of multi-organ failures, necrosis and respiratory problems. The places with High CO concentration can be seen to have higher number of COVID-19 patients.</span>
@@ -136,6 +137,7 @@ const Airquality = () => {
             <br></br>
             <div className="Mapflex_with_tlegend">
               <div id="map3"></div>
+              <img className="legend" src="https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/com.png" alt=""></img>
             </div>
             <br></br>
             <br></br>

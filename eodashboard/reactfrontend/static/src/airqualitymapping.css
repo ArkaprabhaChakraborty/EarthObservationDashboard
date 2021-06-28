@@ -2,21 +2,17 @@
 
 .aqmapping
 {
-    flex:0.4;
+    flex:0.35;
     background-color: rgb(40, 40, 40);
     padding: 40px 20px;
-    padding-bottom: 0;
-    height : 90vh;
     overflow-y: scroll;
+    height:95vh;
 }
 .aqmapping::-webkit-scrollbar
 {
     display:None;
 }
 
-.map-container {
-    height:50vh !important;
-    }
 .labeltext
     {
         color: aliceblue;
