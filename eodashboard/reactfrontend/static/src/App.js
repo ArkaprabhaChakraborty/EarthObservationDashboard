@@ -5,7 +5,7 @@ import Covid from './Covid';
 import Airquality from './airqualitymap';
 import {Switch, Route} from 'react-router-dom';
 import {BrowserRouter} from "react-router-dom";
-
+import Agro from './Agro';
 
 const App = () => {
 return(
@@ -20,7 +20,7 @@ return(
                         <Airquality/>
                     </Route>
                     <Route path="/agro" exact>
-                        <div>AGROSTUFFS</div>
+                        <Agro/>
                     </Route>
                     <Route path="/about">
                         <div>ABOUT US</div>
