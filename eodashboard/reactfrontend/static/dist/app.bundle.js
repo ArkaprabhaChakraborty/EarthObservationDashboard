@@ -177,19 +177,6 @@ var Airquality = function Airquality() {
         }
       })
     });
-    var wmsSource = new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
-      url: 'ttps://sedac.ciesin.columbia.edu/geoserver/wms',
-      params: {
-        'LAYERS': 'epi:epi-environmental-performance-index-2020_hlt-air-quality'
-      }
-    });
-
-    var updateLegend = function updateLegend(resolution) {
-      var graphicUrl = wmsSource.getLegendUrl(resolution);
-      var img = document.getElementById('legendmap');
-      img.src = graphicUrl;
-    };
-
     var map1 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
       //interactions: defaults().extend([select, modify]),
       view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
@@ -199,34 +186,92 @@ var Airquality = function Airquality() {
       layers: [raster1, wms1],
       target: 'map1'
     });
-    var resolution = map1.getView().getResolution();
-    updateLegend(resolution);
-    map1.getView().on('change:resolution', function (event) {
-      var resolution = event.target.getResolution();
-      updateLegend(resolution);
+    var raster2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://gibs-{a-c}.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?TIME=2020_10_03",
+        params: {
+          'LAYERS': 'AIRS_L3_Carbon_Monoxide_500hPa_Volume_Mixing_Ratio_Daily_Day',
+          'TILED': true
+        }
+      })
+    });
+    var map2 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [0, 0],
+        zoom: 1
+      }),
+      layers: [raster2, wms2],
+      target: 'map2'
+    });
+    var raster3 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms3 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://gibs-{a-c}.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?TIME=2020_10_03",
+        params: {
+          'LAYERS': 'MOPITT_CO_Monthly_Surface_Mixing_Ratio_Day',
+          'TILED': true
+        }
+      })
+    });
+    var map3 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [0, 0],
+        zoom: 1
+      }),
+      layers: [raster3, wms3],
+      target: 'map3'
     });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "aqmapping"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "labeltext"
-  }, "Population Density"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Population Density"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex_with_tlegend"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "map"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "legend",
     src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-27%2018-27-15.png",
     alt: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
   }, "The above map shows us that areas with more Population Density has more number of cases. This can be because of the fact that social distancing is really tough to be maintained in such densly populated areas."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "labeltext"
-  }, " Air Quality"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, " Air Quality"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex_with_hlegend"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "map1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legendmap",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-28%2002-22-52.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
-  }, "This map shows the average air quality index from "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "legendmap"
-  }));
+  }, "This map shows the average air quality index from 1950 to 2020. The Air Quality issue category measures the direct impacts of air pollution on human health in each country. It consists of three indicators: PM2.5 exposure, household solid fuels, and ozone exposure."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Carbon Monoxide (500hPa Volume Mixing Ratio Daily by Day)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex_with_tlegend"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map2"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "This map shows the CO levels which might indicate the proportioanlity of increase of diseases, especially COVID-19. Carbon Monoxide can cause serious health damages, sometimes leading to situations of multi-organ failures, necrosis and respiratory problems. The places with High CO concentration can be seen to have higher number of COVID-19 patients."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Carbon Monoxide (Monthly Surface Mixing Ratio by Day)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex_with_tlegend"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map3"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Airquality);
@@ -364,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".aqmapping {\n  flex: 0.4;\n  background-color: #282828;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n  overflow-y: scroll;\n}\n\n.aqmapping::-webkit-scrollbar {\n  display: None;\n}\n\n.map-container {\n  height: 50vh !important;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n#map {\n  height: 30vh;\n  width: 34vw;\n}\n\n.legend {\n  height: 5vh;\n  width: 34vw;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n#map1 {\n  height: 30vh;\n  width: 34vw;\n}", "",{"version":3,"sources":["webpack://./src/airqualitymapping.css"],"names":[],"mappings":"AAEA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,kBAAA;AADJ;;AAGA;EAEI,aAAA;AADJ;;AAIA;EACI,uBAAA;AADJ;;AAGA;EAEQ,gBAAA;EACA,wIAAA;EACA,gBAAA;AADR;;AAGA;EAEI,YAAA;EACA,WAAA;AADJ;;AAGA;EAEI,WAAA;EACA,WAAA;AADJ;;AAGA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AADJ;;AAIA;EAEI,YAAA;EACA,WAAA;AAFJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n.aqmapping\n{\n    flex:0.4;\n    background-color: rgb(40, 40, 40);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n    overflow-y: scroll;\n}\n.aqmapping::-webkit-scrollbar\n{\n    display:None;\n}\n\n.map-container {\n    height:50vh !important;\n    }\n.labeltext\n    {\n        color: aliceblue;\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n        font-weight: 400;\n    }\n#map\n{\n    height:30vh;\n    width:34vw;\n}\n.legend\n{\n    height:5vh;\n    width:34vw;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n\n#map1\n{\n    height:30vh;\n    width:34vw;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".aqmapping {\n  flex: 0.4;\n  background-color: #282828;\n  padding: 40px 20px;\n  padding-bottom: 0;\n  height: 90vh;\n  overflow-y: scroll;\n}\n\n.aqmapping::-webkit-scrollbar {\n  display: None;\n}\n\n.map-container {\n  height: 50vh !important;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n#map {\n  height: 30vh;\n}\n\n.legend {\n  height: 4vh;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n#map1 {\n  height: 30vh;\n  width: 85%;\n}\n\n#map2 {\n  height: 30vh;\n}\n\n#map3 {\n  height: 30vh;\n}\n\n.Mapflex_with_hlegend {\n  display: flex;\n  padding: 10px;\n}\n\n.Mapflex_with_tlegend {\n  display: flex;\n  flex-direction: column;\n  padding: 10px;\n  object-fit: contain;\n}\n\n.legendmap {\n  width: 15%;\n}", "",{"version":3,"sources":["webpack://./src/airqualitymapping.css"],"names":[],"mappings":"AAEA;EAEI,SAAA;EACA,yBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,kBAAA;AADJ;;AAGA;EAEI,aAAA;AADJ;;AAIA;EACI,uBAAA;AADJ;;AAGA;EAEQ,gBAAA;EACA,wIAAA;EACA,gBAAA;AADR;;AAGA;EAEI,YAAA;AADJ;;AAGA;EAEI,WAAA;AADJ;;AAGA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AADJ;;AAIA;EAEI,YAAA;EACA,UAAA;AAFJ;;AAKA;EAEI,YAAA;AAHJ;;AAMA;EAEI,YAAA;AAJJ;;AAQA;EAEI,aAAA;EACA,aAAA;AANJ;;AAQA;EAEI,aAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;AANJ;;AAQA;EAEI,UAAA;AANJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n.aqmapping\n{\n    flex:0.4;\n    background-color: rgb(40, 40, 40);\n    padding: 40px 20px;\n    padding-bottom: 0;\n    height : 90vh;\n    overflow-y: scroll;\n}\n.aqmapping::-webkit-scrollbar\n{\n    display:None;\n}\n\n.map-container {\n    height:50vh !important;\n    }\n.labeltext\n    {\n        color: aliceblue;\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n        font-weight: 400;\n    }\n#map\n{\n    height:30vh;\n}\n.legend\n{\n    height:4vh;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n\n#map1\n{\n    height:30vh;\n    width:85%;\n}\n\n#map2\n{\n    height:30vh;\n}\n\n#map3\n{\n    height:30vh;\n}\n\n\n.Mapflex_with_hlegend\n{\n    display: flex;\n    padding: 10px;\n}\n.Mapflex_with_tlegend\n{\n    display: flex;\n    flex-direction: column;\n    padding:10px;\n    object-fit:contain;\n}\n.legendmap\n{\n    width:15%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

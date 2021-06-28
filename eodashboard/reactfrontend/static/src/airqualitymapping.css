@@ -26,12 +26,10 @@
 #map
 {
     height:30vh;
-    width:34vw;
 }
 .legend
 {
-    height:5vh;
-    width:34vw;
+    height:4vh;
 }
 .maptext
 {
@@ -43,5 +41,33 @@
 #map1
 {
     height:30vh;
-    width:34vw;
+    width:85%;
+}
+
+#map2
+{
+    height:30vh;
+}
+
+#map3
+{
+    height:30vh;
+}
+
+
+.Mapflex_with_hlegend
+{
+    display: flex;
+    padding: 10px;
+}
+.Mapflex_with_tlegend
+{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    object-fit:contain;
+}
+.legendmap
+{
+    width:15%;
 }
