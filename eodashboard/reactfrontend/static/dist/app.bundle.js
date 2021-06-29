@@ -175,6 +175,28 @@ function Agro() {
       layers: [raster1, wms1],
       target: 'map5'
     });
+    var raster2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': 'ndh:ndh-drought-hazard-frequency-distribution',
+          'TILED': true
+        }
+      })
+    });
+    var map2 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [10, 10],
+        zoom: 1
+      }),
+      layers: [raster2, wms2],
+      target: 'map6'
+    });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "Agrodashboard"
@@ -202,7 +224,27 @@ function Agro() {
     className: "Map"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "map5"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", null))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "This Map shows the average production of wheat,rice and maize for all countries from 2017-2020. Maps like this provide insights on food availability during periods of crisis like COVID-19 and provide someuseful insights on how to battle with such crisis. Agricultural productivity is measured as the ratio of agricultural outputs to inputs. While individual products are usually measured by weight, which is known as crop yield, varying products make measuring overall agricultural output difficult. Therefore, agricultural productivity is usually measured as the market value of the final output. This productivity can be compared to many different types of inputs such as labour or land. Such comparisons are called partial measures of productivity.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, " Drought Hazard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map6"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  })));
 }
 
 ;
@@ -581,7 +623,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map4 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map5 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map4\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map5\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map4 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map5 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map6 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map4\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map5\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map6\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -30,6 +30,12 @@
     width: 100%;
     height:50vh;
 }
+#map6
+{
+    flex: 0.85;
+    width: 100%;
+    height:50vh;
+}
 .labeltext
 {
     color: aliceblue;

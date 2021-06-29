@@ -53,6 +53,28 @@ function Agro() {
           target: 'map5'
           });
 
+        var raster2 = new TileLayer({
+          source: new OSM({url:"http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"})
+        });
+      
+        var wms2 = new TileLayer({ 
+          source: new TileWMS(
+            {
+              url:"https://sedac.ciesin.columbia.edu/geoserver/wms",
+              params:{'LAYERS': 'ndh:ndh-drought-hazard-frequency-distribution', 'TILED': true},
+            }
+          )
+        });
+      
+        const map2 = new Map({
+          view: new View({
+            center: [10, 10],
+            zoom: 1
+            }),
+          layers: [raster2,wms2],
+          target: 'map6'
+          });
+
 
         });
     return (
@@ -84,8 +106,27 @@ function Agro() {
             <div className="Mapflex">
               <div className="Map">
                 <div id="map5"></div>
-                <img></img>
+                <img className="legend" src="https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png" alt=""></img>
               </div>
+              <br></br>
+              <span className="maptext">This Map shows the average production of wheat,rice and maize for all countries from 2017-2020. Maps like this provide insights on food availability during periods of crisis like COVID-19 
+              and provide someuseful insights on how to battle with such crisis. Agricultural productivity is measured as the ratio of agricultural outputs to inputs. While individual products are usually measured by weight, which is known as crop yield, varying products make measuring overall agricultural output difficult. Therefore, agricultural productivity is usually measured as the market value of the final output. This 
+              productivity can be compared to many different types of inputs such as labour or land. Such comparisons are called partial measures of productivity.
+              </span>
+            </div>
+            <br></br>
+            <br></br>
+            <span className="labeltext"> Drought Hazard</span>
+            <br></br>
+            <br></br>
+            <div className="Mapflex">
+              <div className="Map">
+                <div id="map6"></div>
+                <img className="legend" src="https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png" alt=""></img>
+              </div>
+              <br></br>
+              <span className="maptext">
+              </span>
             </div>
         </div>
     )};
