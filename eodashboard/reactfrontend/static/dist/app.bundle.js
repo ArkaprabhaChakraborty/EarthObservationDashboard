@@ -239,12 +239,12 @@ function Agro() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "map6"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "legend",
-    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png",
+    className: "legend2",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-29%2016-27-26.png",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
-  })));
+  }, "Along with agriculture its necesarry to take care of drought hazards. A drought is an event of prolonged shortages in the water supply, whether atmospheric, surface water or ground water. A drought can last for months or years, or may be declared after as few as 15 days. The lack of adequate precipitation, either rain or snow, can cause reduced soil moisture or groundwater, diminished stream flow, crop damage, and a general water shortage. Drought is a recurring feature of the climate in most parts of the world. However, these regular droughts have become more extreme and more unpredictable due to climate change. In fact studies based on dendrochronology, or tree rings dating, confirm that drought affected by global warming goes back to 1900. Droughts affect food production and human society, so they are considered a disaster, of natural, supernatural or human cause (which itself could be supernatural causes, malediction, sin, ...). It is among the earliest documented climatic events, present in the Epic of Gilgamesh and tied to the Biblical story of Joseph's arrival in and the later Exodus from Ancient Egypt.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
 }
 
 ;
@@ -268,9 +268,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/Navbar.js");
 /* harmony import */ var _Covid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Covid */ "./src/Covid.js");
 /* harmony import */ var _airqualitymap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./airqualitymap */ "./src/airqualitymap.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Agro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Agro */ "./src/Agro.js");
+/* harmony import */ var _WaterQuality__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./WaterQuality */ "./src/WaterQuality.js");
+
 
 
 
@@ -281,21 +283,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "App"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "App_page"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/",
     exact: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Covid__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_airqualitymap__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Covid__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_airqualitymap__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/agro",
     exact: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Agro__WEBPACK_IMPORTED_MODULE_5__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Agro__WEBPACK_IMPORTED_MODULE_5__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "ABOUT US")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "ABOUT US")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/atm"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "SOMETHING"))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WaterQuality__WEBPACK_IMPORTED_MODULE_6__.default, null))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -396,6 +398,153 @@ var Navbar = function Navbar() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
+
+/***/ }),
+
+/***/ "./src/WaterQuality.js":
+/*!*****************************!*\
+  !*** ./src/WaterQuality.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Water_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Water.css */ "./src/Water.css");
+/* harmony import */ var ol_Map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ol/Map */ "./node_modules/ol/Map.js");
+/* harmony import */ var ol_View__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ol/View */ "./node_modules/ol/View.js");
+/* harmony import */ var ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ol/layer/Tile */ "./node_modules/ol/layer/Tile.js");
+/* harmony import */ var ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ol/source/OSM */ "./node_modules/ol/source/OSM.js");
+/* harmony import */ var ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ol/source/TileWMS */ "./node_modules/ol/source/TileWMS.js");
+
+
+
+
+
+
+
+
+function Water() {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var raster = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': 'esi:esi-environmental-sustainability-index-2005_water-quality',
+          'TILED': true
+        }
+      })
+    });
+    var map = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [10, 10],
+        zoom: 1
+      }),
+      layers: [raster, wms],
+      target: 'map7'
+    });
+    var raster1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': 'epi:epi-environmental-performance-index-2020_eco-water-resources',
+          'TILED': true
+        }
+      })
+    });
+    var map1 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [10, 10],
+        zoom: 1
+      }),
+      layers: [raster1, wms1],
+      target: 'map8'
+    });
+    var raster2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms2 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': 'epi:epi-environmental-performance-index-2020_hlt-sanitation-and-drinking-water',
+          'TILED': true
+        }
+      })
+    });
+    var map2 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [10, 10],
+        zoom: 1
+      }),
+      layers: [raster2, wms2],
+      target: 'map9'
+    });
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "WaterDashboard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Water Quality"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map7"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/cultivate.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "Water quality describes the condition of the water, including chemical, physical, and biological characteristics, usually with respect to its suitability for a particular purpose such as drinking or swimming. Poor water quality can also pose a health risk for ecosystems. The parameters for water quality are determined by the intended use. Work in the area of water quality tends to be focused on water that is treated for potability, industrial/domestic use, or restoration (of an environment/ecosystem, generally for health of human/aquatic life)."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Water Quantity"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map8"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "This Map shows the average production of wheat,rice and maize for all countries from 2017-2020. Maps like this provide insights on food availability during periods of crisis like COVID-19 and provide someuseful insights on how to battle with such crisis. Agricultural productivity is measured as the ratio of agricultural outputs to inputs. While individual products are usually measured by weight, which is known as crop yield, varying products make measuring overall agricultural output difficult. Therefore, agricultural productivity is usually measured as the market value of the final output. This productivity can be compared to many different types of inputs such as labour or land. Such comparisons are called partial measures of productivity.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Sanitation and drinking water"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map9"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend2",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-29%2016-27-26.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "Along with agriculture its necesarry to take care of drought hazards. A drought is an event of prolonged shortages in the water supply, whether atmospheric, surface water or ground water. A drought can last for months or years, or may be declared after as few as 15 days. The lack of adequate precipitation, either rain or snow, can cause reduced soil moisture or groundwater, diminished stream flow, crop damage, and a general water shortage. Drought is a recurring feature of the climate in most parts of the world. However, these regular droughts have become more extreme and more unpredictable due to climate change. In fact studies based on dendrochronology, or tree rings dating, confirm that drought affected by global warming goes back to 1900. Droughts affect food production and human society, so they are considered a disaster, of natural, supernatural or human cause (which itself could be supernatural causes, malediction, sin, ...). It is among the earliest documented climatic events, present in the Epic of Gilgamesh and tied to the Biblical story of Joseph's arrival in and the later Exodus from Ancient Egypt.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
+}
+
+;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Water);
 
 /***/ }),
 
@@ -623,7 +772,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map4 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map5 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map6 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map4\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map5\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map6\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map4 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map5 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map6 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.legend2 {\n  flex: 0.15;\n  height: 20vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map4\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map5\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map6\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.legend2\n{\n    flex:0.15;\n    height:20vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -706,6 +855,34 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".Navbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 8px;\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: #141414;\n  color: white;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n}\n\n.navbarright {\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  padding-top: 0px;\n  padding-bottom: 0px;\n  justify-content: space-between;\n  background-color: #141414;\n}\n\n.navbarleft {\n  display: flex;\n  align-items: center;\n  height: 25px;\n  padding: 10px;\n  border: 1px #141414;\n  border-radius: 5px;\n}\n\n.navbarleft:hover {\n  background-color: #282828;\n}\n\n.header_logo {\n  height: 25px;\n  width: 40px;\n  object-fit: contain;\n  margin-left: 0px;\n}\n\n.headerbutton {\n  display: flex;\n  height: 45px;\n  align-items: center;\n  padding-right: 45px;\n  padding-left: 45px;\n  object-fit: contain;\n  background-color: #141414;\n}\n\n.headerbutton:hover {\n  background-color: #3c3c3c;\n  cursor: pointer;\n  transition: transform 0.2s ease-in-out;\n  transform: scale(1.05) !important;\n  border: 1px #323232;\n  border-radius: 5px;\n}\n\n.header_name {\n  font-family: \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-weight: 1000;\n}", "",{"version":3,"sources":["webpack://./src/Navbar.css"],"names":[],"mappings":"AAAA;EAEI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,YAAA;EACA,gBAAA;EACA,MAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;EACA,wIAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,mBAAA;EACA,8BAAA;EACA,yBAAA;AAAJ;;AAEA;EAEI,aAAA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;;AAGA;EAEI,yBAAA;AADJ;;AAIA;EAEI,YAAA;EACA,WAAA;EACA,mBAAA;EACA,gBAAA;AAFJ;;AAIA;EAEI,aAAA;EACA,YAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;AAFJ;;AAIA;EAEI,yBAAA;EACA,eAAA;EACA,sCAAA;EACA,iCAAA;EACA,mBAAA;EACA,kBAAA;AAFJ;;AAIA;EAEI,wEAAA;EACA,iBAAA;AAFJ","sourcesContent":[".Navbar\n{\n    display:flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 8px;\n    position: sticky;\n    top: 0;\n    z-index: 100;\n    background-color: rgb(20, 20, 20);\n    color: rgb(255, 255, 255);\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n}\n.navbarright\n{\n    display: flex;\n    align-items: center;\n    padding:10px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n    justify-content: space-between;\n    background-color: rgb(20, 20, 20);\n}\n.navbarleft\n{\n    display:flex;\n    align-items:center;\n    height: 25px;\n    padding:10px;\n    border: 1px rgb(20, 20, 20);\n    border-radius: 5px;\n}\n\n.navbarleft:hover\n{\n    background-color: rgb(40, 40, 40);\n}\n\n.header_logo\n{\n    height:25px;\n    width: 40px;\n    object-fit: contain;\n    margin-left: 0px;\n}\n.headerbutton\n{\n    display: flex;\n    height:45px;\n    align-items: center;\n    padding-right: 45px;\n    padding-left: 45px;\n    object-fit: contain;\n    background-color: rgb(20, 20, 20);\n}\n.headerbutton:hover\n{\n    background-color: rgb(60,60,60);\n    cursor: pointer;\n    transition: transform 0.2s ease-in-out;\n    transform: scale(1.05) !important;\n    border: 1px rgb(50,50,50);\n    border-radius: 5px;\n}\n.header_name\n{\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n    font-weight: 1000;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Water.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Water.css ***!
+  \****************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".WaterDashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map7 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map8 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map9 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.legend2 {\n  flex: 0.15;\n  height: 20vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Water.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.WaterDashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map7\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map8\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map9\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.legend2\n{\n    flex:0.15;\n    height:20vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -81541,6 +81718,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Navbar_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/Water.css":
+/*!***********************!*\
+  !*** ./src/Water.css ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Water_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./Water.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Water.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Water_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_Water_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 

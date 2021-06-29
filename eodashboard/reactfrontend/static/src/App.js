@@ -6,7 +6,7 @@ import Airquality from './airqualitymap';
 import {Switch, Route} from 'react-router-dom';
 import {BrowserRouter} from "react-router-dom";
 import Agro from './Agro';
-
+import Water from './WaterQuality';
 const App = () => {
 return(
     <BrowserRouter>
@@ -26,7 +26,7 @@ return(
                         <div>ABOUT US</div>
                     </Route>
                     <Route path="/atm">
-                        <div>SOMETHING</div>
+                        <Water/>
                     </Route>
                 </Switch>
             </div>

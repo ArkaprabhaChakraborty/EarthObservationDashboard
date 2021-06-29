@@ -2,7 +2,7 @@
 
 
 
-.Agrodashboard
+.WaterDashboard
 {
     flex:1;
     background-color: rgb(48, 48, 48);
@@ -18,19 +18,19 @@
     background-color: rgb(40, 40, 45);
     flex-direction: column;
 }
-#map4
+#map7
 {
     flex: 0.85;
     width: 100%;
     height:50vh;
 }
-#map5
+#map8
 {
     flex: 0.85;
     width: 100%;
     height:50vh;
 }
-#map6
+#map9
 {
     flex: 0.85;
     width: 100%;
