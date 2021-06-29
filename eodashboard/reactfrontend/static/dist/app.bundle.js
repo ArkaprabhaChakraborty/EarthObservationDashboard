@@ -151,18 +151,58 @@ function Agro() {
         zoom: 1
       }),
       layers: [raster, wms],
-      target: 'map'
+      target: 'map4'
+    });
+    var raster1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_3__.default({
+        url: "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      })
+    });
+    var wms1 = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_2__.default({
+      source: new ol_source_TileWMS__WEBPACK_IMPORTED_MODULE_4__.default({
+        url: "https://sedac.ciesin.columbia.edu/geoserver/wms",
+        params: {
+          'LAYERS': '	crop-climate:crop-climate-effects-climate-global-food-production',
+          'TILED': true
+        }
+      })
+    });
+    var map1 = new ol_Map__WEBPACK_IMPORTED_MODULE_5__.default({
+      view: new ol_View__WEBPACK_IMPORTED_MODULE_6__.default({
+        center: [10, 10],
+        zoom: 1
+      }),
+      layers: [raster1, wms1],
+      target: 'map5'
     });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "Agrodashboard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "labeltext"
-  }, "Global Agricultural Lands: Croplands"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Global Agricultural Lands: Croplands"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "Mapflex"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "map"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", null)));
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "legend",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/cultivate.png",
+    alt: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "Agriculture utilizes arable land for the production of food, feed and fiber from annual and permanent crops (cropland), and uses grassland and permanent pastures for grazing and the production of feed for ruminant livestock herds (grassland)."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "maptext"
+  }, "The Global Croplands data set represents the proportion of land areas used as cropland (land used for the cultivation of food) in the year 2000. Satellite data from Modetate Resolution Imaging Spectroradiometer (MODIS) and Satellite Pour l'Observation de la Terre (SPOT) Image Vegetation sensors were combined with agricultural inventory data to create a global data set. The visual presentation of these data demonstrates the extent to which human land use for agriculture has changed the Earth and in which areas this change is most intense. The data were compiled by Navin Ramankutty et al. (2008) and distributed by the Columbia University Center for International Earth Science Information Network (CIESIN). Here we can see the total cultivable land available till 2020."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "labeltext"
+  }, "Crop Climate: Maize, Rice, and Wheat"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Mapflex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "Map"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "map5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", null))));
 }
 
 ;
@@ -541,7 +581,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  height: 50vh;\n  padding: 20px;\n}\n\n#map {\n  height: 50vh;\n  width: 100%;\n  flex: 0.85;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,YAAA;EACA,aAAA;AAHJ;;AAKA;EAEI,YAAA;EACA,WAAA;EACA,UAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    height:50vh;\n    padding:20px;\n}\n#map\n{\n    height:50vh;\n    width:100%;\n    flex: 0.85;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".Agrodashboard {\n  flex: 1;\n  background-color: #303030;\n  padding: 10px;\n  padding-bottom: 0;\n}\n\n.Mapflex {\n  display: flex;\n  padding: 10px;\n  object-fit: contain;\n  align-items: center;\n  background-color: #28282d;\n  flex-direction: column;\n}\n\n#map4 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n#map5 {\n  flex: 0.85;\n  width: 100%;\n  height: 50vh;\n}\n\n.labeltext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 400;\n}\n\n.maptext {\n  color: aliceblue;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-weight: 10;\n}\n\n.legend {\n  flex: 0.15;\n  height: 10vh;\n}\n\n.Map {\n  display: flex;\n  width: 100%;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/Agro.css"],"names":[],"mappings":"AAIA;EAEI,OAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,WAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,gBAAA;AAHJ;;AAKA;EAEI,gBAAA;EACA,wIAAA;EACA,eAAA;AAHJ;;AAKA;EAEI,UAAA;EACA,YAAA;AAHJ;;AAKA;EAEI,aAAA;EACA,WAAA;EACA,mBAAA;AAHJ","sourcesContent":["@import \"https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css\";\n\n\n\n.Agrodashboard\n{\n    flex:1;\n    background-color: rgb(48, 48, 48);\n    padding: 10px;\n    padding-bottom: 0;\n}\n.Mapflex\n{\n    display:flex;\n    padding:10px;\n    object-fit: contain;\n    align-items: center;\n    background-color: rgb(40, 40, 45);\n    flex-direction: column;\n}\n#map4\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n#map5\n{\n    flex: 0.85;\n    width: 100%;\n    height:50vh;\n}\n.labeltext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 400;\n}\n.maptext\n{\n    color: aliceblue;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 10;\n}\n.legend\n{\n    flex:0.15;\n    height:10vh;\n}\n.Map\n{\n    display: flex;\n    width: 100%;\n    align-items: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
