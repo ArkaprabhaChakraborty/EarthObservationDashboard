@@ -263,3 +263,6 @@ eodashboard/reactfrontend/static/webpack.config.js
 eodashboard/reactfrontend/static/src/
 package-lock.json
 package.json
+eodashboard/reactfrontend/static/dist/app.bundle.js.LICENSE.txt
+eodashboard/reactfrontend/static/dist/webpack-stats.json
+eodashboard/reactfrontend/static/dist/app.bundle.js.map
