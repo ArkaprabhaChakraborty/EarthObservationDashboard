@@ -257,3 +257,9 @@ migrations/
 
 # database
 *.sqlite3
+
+eodashboard/reactfrontend/static/package.json
+eodashboard/reactfrontend/static/webpack.config.js
+eodashboard/reactfrontend/static/src/
+package-lock.json
+package.json
