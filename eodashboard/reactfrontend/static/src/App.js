@@ -23,7 +23,10 @@ return(
                         <Agro/>
                     </Route>
                     <Route path="/about">
-                        <div>ABOUT US</div>
+                        <div>Team members :
+                            Aniruddha Basak : B.tech Computer Science and Engineering (Maulana ABul Kalam Azad Univesity of Technology)
+                            Arkaprabha Chakraborty: B.tech Comnputer SCience and Engineering (Maulana ABul Kalam Azad Univesity of Technology)
+                        </div>
                     </Route>
                     <Route path="/atm">
                         <Water/>

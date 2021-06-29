@@ -295,7 +295,7 @@ var App = function App() {
     exact: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Agro__WEBPACK_IMPORTED_MODULE_5__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "ABOUT US")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Team members : Aniruddha Basak : B.tech Computer Science and Engineering (Maulana ABul Kalam Azad Univesity of Technology) Arkaprabha Chakraborty: B.tech Comnputer SCience and Engineering (Maulana ABul Kalam Azad Univesity of Technology)")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/atm"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WaterQuality__WEBPACK_IMPORTED_MODULE_6__.default, null))))));
 };
@@ -508,7 +508,7 @@ function Water() {
     id: "map7"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "legend",
-    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/cultivate.png",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/water_quality.png",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
@@ -522,11 +522,11 @@ function Water() {
     id: "map8"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "legend",
-    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/weight.png",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/water.png",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
-  }, "This Map shows the average production of wheat,rice and maize for all countries from 2017-2020. Maps like this provide insights on food availability during periods of crisis like COVID-19 and provide someuseful insights on how to battle with such crisis. Agricultural productivity is measured as the ratio of agricultural outputs to inputs. While individual products are usually measured by weight, which is known as crop yield, varying products make measuring overall agricultural output difficult. Therefore, agricultural productivity is usually measured as the market value of the final output. This productivity can be compared to many different types of inputs such as labour or land. Such comparisons are called partial measures of productivity.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }, "Water quantity is the timing and total yield of water from a watershed, and is measured by total yield and peak flow over a specified period of time. Most of the earth consists of water, there is much more water than there is land. About 70% of the earth's surface is covered in water. But water also exists in the air as vapour and in aquifers in the soil, as groundwater. The total water supply of the world is 1.400.000.000 km3. (A m3 of water equals 1,000 litres.) Each year, 119.000 km3 of water precipitates on land and 74.200 km3 evaporates into the atmosphere, by evapotranspiration from soil and vegetation. On ocean and sea surface 450.000 km3 of water falls every year and 502.800 km3 evaporates. Of the freshwater on Earth, about 2.200 km3 flows in the ground, mostly within half a mile from the surface. About 135.000 km3 of water can be found in the atmosphere as water vapour, in lakes, soil moisture, marshes and wetlands, rivers, plant and animals. Groundwater and fresh water stored in surface bodies and in the atmosphere represent an available resource of fresh water. Most of the freshwater is stored in glaciers and icecaps, mainly in the Polar Regions and in Greenland, and it is unavailable. This is another 24.500.000 km3 of water, formig the 69.5 % of the total fresh water of the Earth.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "labeltext"
   }, "Sanitation and drinking water"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "Mapflex"
@@ -536,11 +536,11 @@ function Water() {
     id: "map9"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "legend2",
-    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/Screenshot%20from%202021-06-29%2016-27-26.png",
+    src: "https://raw.githubusercontent.com/ArkaprabhaChakraborty/EarthObservationDashboard/main/eodashboard/reactfrontend/static/src/data/sanit.png",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "maptext"
-  }, "Along with agriculture its necesarry to take care of drought hazards. A drought is an event of prolonged shortages in the water supply, whether atmospheric, surface water or ground water. A drought can last for months or years, or may be declared after as few as 15 days. The lack of adequate precipitation, either rain or snow, can cause reduced soil moisture or groundwater, diminished stream flow, crop damage, and a general water shortage. Drought is a recurring feature of the climate in most parts of the world. However, these regular droughts have become more extreme and more unpredictable due to climate change. In fact studies based on dendrochronology, or tree rings dating, confirm that drought affected by global warming goes back to 1900. Droughts affect food production and human society, so they are considered a disaster, of natural, supernatural or human cause (which itself could be supernatural causes, malediction, sin, ...). It is among the earliest documented climatic events, present in the Epic of Gilgamesh and tied to the Biblical story of Joseph's arrival in and the later Exodus from Ancient Egypt.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
+  }, "The benefits of having access to an improved drinking water source can only be fully realized when there is also access to improved sanitation and adherence to good hygiene practices. Beyond the immediate, obvious advantages of people being hydrated and healthier, access to water, sanitation and hygiene \u2013 known collectively as WASH \u2013 has profound wider socio-economic impacts, particularly for women and girls. The fact that WASH is the subject of dedicated targets within the Sustainable Development Goal (SDG 6) is testament to its fundamental role in public health and therefore in the future of sustainable development. Indeed, access to safe water and sanitation are human rights, as recognized in 2010 by the United Nations General Assembly. For universal fulfilment of these rights to become reality, we will need the right systems: well-resourced, capable institutions delivering services and changing behaviour in resilient and appropriate ways.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null));
 }
 
 ;
